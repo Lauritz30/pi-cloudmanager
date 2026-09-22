@@ -1,6 +1,6 @@
 {
   "name": "pi-cloudmanager",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "rclone integration for the pi coding agent — browse, read, copy, sync, move and delete files across any rclone remote (OneDrive, S3, SFTP, Google Drive, ...).",
   "keywords": [
     "pi-package",
