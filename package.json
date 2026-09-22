@@ -1,0 +1,62 @@
+{
+  "name": "pi-rclone",
+  "version": "0.1.0",
+  "description": "rclone integration for the pi coding agent — browse, read, copy, sync, move and delete files across any rclone remote (OneDrive, S3, SFTP, Google Drive, ...).",
+  "keywords": [
+    "pi-package",
+    "rclone",
+    "onedrive",
+    "cloud-storage",
+    "pi-extension"
+  ],
+  "author": "Lauritz30",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lauritz30/pi-rclone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lauritz30/pi-rclone/issues"
+  },
+  "files": [
+    "index.ts",
+    "src",
+    "prompts",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --test 'test/**/*.test.ts'",
+    "test:watch": "node --test --watch 'test/**/*.test.ts'"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.70.0",
+    "@earendil-works/pi-tui": ">=0.70.0",
+    "typebox": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.70.0",
+    "@earendil-works/pi-tui": ">=0.70.0",
+    "@semantic-release/git": "^10.0.0",
+    "@types/node": "^24.0.0",
+    "semantic-release": "^25.0.0",
+    "typebox": ">=1.0.0",
+    "typescript": "^5.8.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "prompts": [
+      "./prompts"
+    ]
+  }
+}
