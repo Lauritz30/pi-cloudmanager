@@ -1,11 +1,11 @@
 /**
- * Configuration for the pi-rclone extension.
+ * Configuration for the pi-cloudmanager extension.
  *
  * The source of truth for remotes is rclone's own config file
  * (~/.config/rclone/rclone.conf or $RCLONE_CONFIG). This extension does NOT
  * duplicate credentials. Its config file only holds pi-specific policy:
  *
- *   ~/.pi/agent/pi-rclone.json
+ *   ~/.pi/agent/pi-cloudmanager.json
  *
  *   {
  *     "defaultRemote": "onedrive",
@@ -22,7 +22,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-export const CONFIG_FILE_NAME = "pi-rclone.json";
+export const CONFIG_FILE_NAME = "pi-cloudmanager.json";
 
 export type SafetyLevel = "open" | "confirm" | "readonly";
 
@@ -150,7 +150,7 @@ export function loadConfig(path: string = getConfigPath()): RcloneConfig {
 
 export interface ResolvedRemote {
   name: string;
-  /** Optional policy overlay from pi-rclone.json; undefined when none is configured. */
+  /** Optional policy overlay from pi-cloudmanager.json; undefined when none is configured. */
   override?: RcloneRemoteConfig;
 }
 

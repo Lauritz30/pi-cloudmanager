@@ -6,7 +6,7 @@ import { Box, Text } from "@earendil-works/pi-tui";
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 import type { RcloneConfig } from "./config.ts";
 
-const ENTRY_TYPE = "pi-rclone:connection";
+const ENTRY_TYPE = "pi-cloudmanager:connection";
 
 export interface StatusUi {
   ui: {
@@ -39,7 +39,7 @@ export function buildFooterLabel(snapshot: StatusSnapshot): string {
 }
 
 export function publishFooterStatus(ctx: StatusUi, snapshot: StatusSnapshot): void {
-  ctx.ui.setStatus("pi-rclone", buildFooterLabel(snapshot));
+  ctx.ui.setStatus("pi-cloudmanager", buildFooterLabel(snapshot));
 }
 
 export function publishConnectionCard(pi: ExtensionAPI, config: RcloneConfig, snapshot: StatusSnapshot): void {

@@ -6,8 +6,8 @@ import { join } from "node:path";
 import { ConfigError, loadConfig, resolveRemote, resolveSafetyLevel } from "../src/config.ts";
 
 function withConfig(content: string, fn: (path: string) => void): void {
-  const dir = mkdtempSync(join(tmpdir(), "pi-rclone-config-"));
-  const path = join(dir, "pi-rclone.json");
+  const dir = mkdtempSync(join(tmpdir(), "pi-cloudmanager-config-"));
+  const path = join(dir, "pi-cloudmanager.json");
   try {
     writeFileSync(path, content, "utf8");
     fn(path);
@@ -17,7 +17,7 @@ function withConfig(content: string, fn: (path: string) => void): void {
 }
 
 test("loadConfig returns defaults when file is missing", () => {
-  const config = loadConfig("/does/not/exist/pi-rclone.json");
+  const config = loadConfig("/does/not/exist/pi-cloudmanager.json");
   assert.equal(config.configExists, false);
   assert.equal(config.safetyLevel, "confirm");
   assert.deepEqual(config.remotes, []);

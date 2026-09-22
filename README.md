@@ -1,4 +1,4 @@
-# pi-rclone
+# pi-cloudmanager
 
 rclone integration for the [pi coding agent](https://pi.dev) — browse, read, copy, sync, move and delete files across any [rclone remote](https://rclone.org/) (OneDrive, S3, SFTP, Google Drive, Dropbox, WebDAV, …).
 
@@ -25,17 +25,17 @@ rclone listremotes     # confirm it shows up
 Then install the extension:
 
 ```bash
-pi install npm:pi-rclone
+pi install npm:pi-cloudmanager
 # or from git:
-pi install git:github.com/Lauritz30/pi-rclone
+pi install git:github.com/Lauritz30/pi-cloudmanager
 # one-off session:
-pi -e npm:pi-rclone
+pi -e npm:pi-cloudmanager
 ```
 
 ## Quick Start
 
 1. Add a remote: `rclone config` → `n` (new remote) → name it e.g. `onedrive` → pick type `onedrive` → follow the OAuth flow.
-2. Create `~/.pi/agent/pi-rclone.json` (optional — only holds policy, not credentials):
+2. Create `~/.pi/agent/pi-cloudmanager.json` (optional — only holds policy, not credentials):
 
 ```json
 {
@@ -59,7 +59,7 @@ pi -e npm:pi-rclone
 }
 ```
 
-Remotes themselves always live in rclone's config file (`~/.config/rclone/rclone.conf`, or `$RCLONE_CONFIG`). The `remotes` array in `pi-rclone.json` is only a per-remote *policy overlay* — it never stores credentials.
+Remotes themselves always live in rclone's config file (`~/.config/rclone/rclone.conf`, or `$RCLONE_CONFIG`). The `remotes` array in `pi-cloudmanager.json` is only a per-remote *policy overlay* — it never stores credentials.
 
 ## Tools
 
@@ -141,7 +141,7 @@ A rule matches when `action` equals the tool name, `remote` (if set) equals the 
 
 ## Configuration reference
 
-`~/.pi/agent/pi-rclone.json`
+`~/.pi/agent/pi-cloudmanager.json`
 
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -168,9 +168,9 @@ npm run check
 Run against a local checkout from anywhere with:
 
 ```bash
-pi install /absolute/path/to/pi-rclone
+pi install /absolute/path/to/pi-cloudmanager
 # or, for a one-off session:
-pi -e /absolute/path/to/pi-rclone
+pi -e /absolute/path/to/pi-cloudmanager
 ```
 
 ## Requirements

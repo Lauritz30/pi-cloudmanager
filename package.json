@@ -1,5 +1,5 @@
 {
-  "name": "pi-rclone",
+  "name": "pi-cloudmanager",
   "version": "0.1.0",
   "description": "rclone integration for the pi coding agent — browse, read, copy, sync, move and delete files across any rclone remote (OneDrive, S3, SFTP, Google Drive, ...).",
   "keywords": [
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Lauritz30/pi-rclone.git"
+    "url": "https://github.com/Lauritz30/pi-cloudmanager.git"
   },
   "bugs": {
-    "url": "https://github.com/Lauritz30/pi-rclone/issues"
+    "url": "https://github.com/Lauritz30/pi-cloudmanager/issues"
   },
   "files": [
     "index.ts",
